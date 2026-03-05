@@ -1,0 +1,29 @@
+{
+  "name": "design-dna",
+  "version": "10.0.0",
+  "description": "Design-DNA v10.0 — Ultimate Clone Engine",
+  "type": "module",
+  "bin": {
+    "design-dna": "./cli.mjs"
+  },
+  "scripts": {
+    "analyze": "node cli.mjs analyze",
+    "compare": "node cli.mjs compare",
+    "diff": "node cli.mjs diff",
+    "web": "node web/server.mjs"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.0.0",
+    "dotenv": "^17.3.1",
+    "express": "^4.21.0",
+    "multer": "^2.1.0",
+    "ora": "^8.0.0",
+    "puppeteer": "^23.0.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "pixelmatch": "^7.1.0",
+    "pngjs": "^7.0.0"
+  }
+}

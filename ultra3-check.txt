@@ -1,0 +1,16 @@
+ALL KEYS: meta, tokens, layout, animation, responsive, interaction, techStack, screenshots, performance, accessibility, lighthouse, crawl, runtimeHook, svgAnimations, cssAdvanced, webflow, webgl, lottieRive, authFlow, apiIntelligence, interactions, canvasCapture, spaRoutes
+---
+runtimeHook: YES io:22
+svgAnimations: YES total:30 cssAnim:7
+cssAdvanced: YES viewTrans:1 supports:60
+webflow: YES isWebflow:false
+webgl: YES canvases:0 shaders:0
+lottieRive: YES lottie:0
+authFlow: YES forms:1 oauth:0
+apiIntelligence: YES endpoints:1 cookies:2
+interactions: YES modals:0
+canvasCapture: YES total:0 frames:0
+spaRoutes: YES router:null routes:10 analyzed:10
+---
+filesize: 436KB
+mode: ultra

@@ -1,0 +1,85 @@
+{
+    "name": "framer",
+    "description": "Framer-specific animation and interaction patterns",
+    "version": "1.0.0",
+    "detectors": {
+        "platform": {
+            "attributes": ["data-framer-hydrate-v2", "data-framer-name", "data-framer-appear-id", "data-framer-component-type"],
+            "urlPatterns": ["framerusercontent.com", "framer.app"],
+            "metaGenerator": "framer"
+        },
+        "ssrVariant": {
+            "selector": ".ssr-variant",
+            "description": "Framer SSR responsive variant containers — hidden by default, shown via CSS media queries"
+        }
+    },
+    "animations": {
+        "scrollReveal": {
+            "trigger": "scroll",
+            "detection": "opacity 0→1 + transform translateY on scroll",
+            "gsap": "gsap.from(el, { y: 50, opacity: 0, scrollTrigger: { trigger: el, start: 'top 85%' } })",
+            "motion": "{ initial: { opacity: 0, y: 50 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.8 } }"
+        },
+        "parallax": {
+            "trigger": "scroll",
+            "detection": "transform translateY changes at non-1x scroll ratio",
+            "gsap": "gsap.to(el, { y: () => scrollY * speed, scrollTrigger: { scrub: true } })",
+            "motion": null
+        },
+        "stickySection": {
+            "trigger": "scroll",
+            "detection": "position: sticky or pinned section with scroll-linked transforms",
+            "gsap": "ScrollTrigger.create({ trigger: el, pin: true, start: 'top top', end: '+=200%' })",
+            "motion": null
+        },
+        "maskReveal": {
+            "trigger": "scroll",
+            "detection": "clipPath or borderRadius changes on scroll (circle expanding)",
+            "gsap": "gsap.fromTo(el, { clipPath: 'circle(10%)' }, { clipPath: 'circle(100%)', scrollTrigger: { scrub: 1 } })",
+            "motion": null
+        },
+        "horizontalScroll": {
+            "trigger": "scroll",
+            "detection": "translateX changes linked to vertical scroll",
+            "gsap": "gsap.to(strip, { xPercent: -100, scrollTrigger: { trigger: section, scrub: 1, pin: true } })",
+            "motion": null
+        },
+        "marquee": {
+            "trigger": "auto",
+            "detection": "infinite translateX animation on repeating text elements, often with rotation matrix",
+            "gsap": "gsap.to(strip, { xPercent: -50, duration: 15, repeat: -1, ease: 'none' })",
+            "motion": null
+        },
+        "hoverScale": {
+            "trigger": "hover",
+            "detection": "scale change on :hover",
+            "gsap": null,
+            "motion": "{ whileHover: { scale: 1.05 }, transition: { type: 'spring', stiffness: 300 } }"
+        },
+        "hoverLift": {
+            "trigger": "hover",
+            "detection": "translateY + boxShadow change on :hover",
+            "gsap": null,
+            "motion": "{ whileHover: { y: -8, boxShadow: '0 20px 40px rgba(0,0,0,0.2)' } }"
+        },
+        "entranceFade": {
+            "trigger": "load",
+            "detection": "opacity 0→1 with delay on page load (framer-appear-id)",
+            "gsap": null,
+            "motion": "{ initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { duration: 0.8, delay: 0.2 } }"
+        },
+        "3dPerspective": {
+            "trigger": "static",
+            "detection": "matrix3d transform with perspective on child images",
+            "gsap": null,
+            "motion": null,
+            "css": "transform: matrix3d(...); perspective: 1000px;"
+        }
+    },
+    "components": {
+        "RichTextContainer": "Maps to styled <div> with typography",
+        "SVG": "Inline SVG component",
+        "Video": "Autoplay muted loop video",
+        "ScrollTransformEffect": "Scroll-linked parallax/reveal wrapper"
+    }
+}

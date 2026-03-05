@@ -1,0 +1,72 @@
+{
+    "name": "webflow",
+    "description": "Webflow-specific animation and interaction patterns",
+    "version": "1.0.0",
+    "detectors": {
+        "platform": {
+            "attributes": [
+                "data-wf-site",
+                "data-wf-page",
+                "data-wf-element",
+                "data-w-id"
+            ],
+            "urlPatterns": [
+                "assets.website-files.com",
+                "webflow.io"
+            ],
+            "classes": [
+                "w-layout-grid",
+                "w-slider",
+                "w-nav",
+                "w-dropdown",
+                "w-tabs"
+            ]
+        }
+    },
+    "animations": {
+        "ix2ScrollIn": {
+            "trigger": "scroll",
+            "detection": "data-w-id + Webflow IX2 scroll-into-view triggers",
+            "gsap": "gsap.from(el, { y: 40, opacity: 0, scrollTrigger: { trigger: el, start: 'top 80%' } })",
+            "motion": "{ initial: { opacity: 0, y: 40 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true } }"
+        },
+        "ix2ScrollProgress": {
+            "trigger": "scroll",
+            "detection": "Webflow IX2 scroll-progress-based transform/opacity",
+            "gsap": "gsap.to(el, { y: 100, scrollTrigger: { trigger: section, scrub: true } })",
+            "motion": null
+        },
+        "ix2Hover": {
+            "trigger": "hover",
+            "detection": "data-w-id + Webflow IX2 hover triggers",
+            "gsap": null,
+            "motion": "{ whileHover: { scale: 1.05 }, transition: { duration: 0.3 } }"
+        },
+        "ix2PageLoad": {
+            "trigger": "load",
+            "detection": "Webflow IX2 page-load triggers, sequential opacity/transform",
+            "gsap": "gsap.timeline().from('.hero-title', { y: 30, opacity: 0 }).from('.hero-subtitle', { y: 20, opacity: 0 }, '-=0.3')",
+            "motion": "{ initial: { opacity: 0, y: 30 }, animate: { opacity: 1, y: 0 }, transition: { delay: 0.2 } }"
+        },
+        "slider": {
+            "trigger": "interaction",
+            "detection": ".w-slider with auto-advancing slides",
+            "gsap": null,
+            "motion": "AnimatePresence + slide transition"
+        },
+        "tabs": {
+            "trigger": "interaction",
+            "detection": ".w-tabs with content switching",
+            "gsap": null,
+            "motion": "AnimatePresence + fade transition"
+        }
+    },
+    "components": {
+        "w-layout-grid": "CSS Grid layout",
+        "w-slider": "Image slider / carousel",
+        "w-nav": "Navigation bar with mobile menu",
+        "w-dropdown": "Dropdown menu",
+        "w-tabs": "Tabbed content",
+        "w-form": "Form with validation"
+    }
+}

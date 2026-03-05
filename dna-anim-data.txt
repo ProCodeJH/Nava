@@ -1,0 +1,44 @@
+=== ANIMATION DNA DATA ===
+
+--- KEYFRAMES ---
+Count: 1
+{"name":"__framer-loading-spin","frames":[{"offset":"0%","styles":"transform: rotate(0deg);"},{"offset":"100%","styles":"transform: rotate(360deg);"}]}
+
+--- TRANSITIONS ---
+Count: 2
+{"selector":"#__framer-editorbar-label","transition":"opacity 0.4s ease-out"}
+{"selector":"#__framer-editorbar-button","transition":"unset"}
+
+--- INTERSECTION OBSERVERS ---
+Count: 22
+
+--- SCROLL EVENTS ---
+[{"target":"DIV#main","type":"scroll","passive":false,"timestamp":1374.7999999970198},{"target":"DIV#main","type":"wheel","passive":true,"timestamp":1374.8999999910593},{"target":"DIV#main","type":"wheel","passive":true,"timestamp":1374.8999999910593},{"target":"window","type":"scroll","passive":tru
+
+--- INTERACTION DNA ---
+Hover effects: 0
+Scroll triggers: 0
+Click events: 0
+
+--- RUNTIME HOOK KEYS ---
+["gsapCalls","gsapTimelines","scrollTriggers","animeInstances","rafCallbackCount","intersectionObservers","scrollListeners","framerMotionProps"]
+
+--- ANIMATION KEYS ---
+["keyframes","transitions","animationProperties","activeAnimations","easings","framerComponents","gsapTriggers","mutationTargets","cdpAnimations"]
+
+--- INTERACTION KEYS ---
+["hovers","blendModes","cursors","focusStates","customCursors"]
+
+--- LAYOUT SECTIONS ---
+Count: 6
+{"tag":"div","name":"main","bounds":{"x":0,"y":0,"width":1920,"height":34935},"padding":"0px","backgroundColor":null,"children":4}
+{"tag":"div","name":"framer-7jOH9 framer-3xDOn framer-iEfnf framer-72rtr7","bounds":{"x":0,"y":0,"width":1920,"height":34935},"padding":"0px","backgroundColor":"rgb(255, 255, 255)","children":19}
+{"tag":"section","name":"section","bounds":{"x":-944,"y":344,"width":3809,"height":1124},"padding":"24px","backgroundColor":null,"children":1}
+
+--- CSS ADVANCED ---
+viewTransitions: [object Object]
+supportsConditions: 60
+
+--- TECH STACK ---
+["libraries","framework","meta","scripts","bundleInfo"]
+frameworks: undefined

@@ -1,0 +1,33 @@
+meta -> ["url","timestamp","engine","viewport","mode"]
+tokens -> ["colors","typography","variables","spacing"]
+layout -> ["sections","grids","flexboxes","stacks","sticky","snap","parallax"]
+animation -> ["keyframes","transitions","animationProperties","activeAnimations","easings","framerComponents","gsapTriggers","mutationTargets"]
+responsive -> ["breakpoints","viewportDiffs"]
+interaction -> ["hovers","blendModes","cursors","focusStates","customCursors"]
+techStack -> ["libraries","framework","meta","scripts","bundleInfo"]
+screenshots -> ["captured","bands"]
+performance -> ["lcp","fcp","cls","tbt","tti","domContentLoaded","fullLoad","willChangeAudit"]
+accessibility -> ["issues","score","ariaUsage","headingHierarchy","contrastIssues","tabOrder","reducedMotion","landmarks"]
+lighthouse -> ["scores","diagnostics","opportunities"]
+crawl -> ["pages","total","fromSitemap"]
+runtimeHook -> ["gsapCalls","gsapTimelines","scrollTriggers","animeInstances","rafCallbackCount","intersectionObservers","scrollListeners","framerMotionProps"]
+svgAnimations -> ["inlineSVGs","externalSVGs","smilAnimations","cssAnimatedSVGs","pathMorphTargets","filters","sprites","symbols"]
+cssAdvanced -> ["scrollDrivenAnimations","viewTransitions","containerQueries","cascadeLayers","subgrid","registeredProperties","supportsConditions","modernColors"]
+webflow -> ["isWebflow","ix2Data","interactions","triggers","animations","cmsCollections","customAttributes","webflowClasses"]
+webgl -> ["canvases","webglContexts","shaders","drawCalls","threejs","babylon","spline","aframe"]
+lottieRive -> ["lottieFiles","lottiePlayers","dotLottiePlayers","rivePlayers","spineAnimations"]
+authFlow -> ["loginForms","oauthProviders","jwtTokens","sessionStorage","csrfTokens","authHeaders","protectedRoutePatterns","nextDataAuth"]
+apiIntelligence -> ["requests","apiEndpoints","graphqlQueries","websockets","eventSources","cookies","corsHeaders","cspPolicy"]
+interactions -> ["modals","tabs","accordions","dropdowns","tooltips","toasts","hoverEffects","totalInteractions"]
+---
+webgl: {"canvases":0,"shaders":0,"threejs":null}
+svgAnim: {"total":30,"smil":0,"cssAnim":7,"inline":29}
+cssAdv: {"scrollDrivenAnimations":0,"viewTransitions":1,"containerQueries":0,"cascadeLayers":0,"subgrid":0,"registeredProperties":0,"supportsConditions":60,"modernColors":0,"logicalProperties":3,"hasSelector":0,"cssNesting":0,"popoverAPI":0,"anchorPositioning":0}
+webflow: false triggers:0
+runtime: gsap:0 framer:0 io:22
+auth: forms:1 oauth:0
+lottie: files:0 rive:0
+spa: router:undefined routes:undefined analyzed:undefined
+canvas: total:undefined frames:undefined
+interact: modals:0 tabs:0 dropdowns:0
+api: endpoints:1 ws:0 cookies:2

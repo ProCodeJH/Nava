@@ -1,0 +1,1488 @@
+{
+  "totalFrames": 296,
+  "totalHeight": 34935,
+  "framesDir": "C:\\Users\\louis\\.gemini\\antigravity\\scratch\\design-dna\\live-test-evople\\screencast-frames",
+  "fps": 4,
+  "frames": [
+    {
+      "index": 0,
+      "path": "frame-0000.png",
+      "timestamp": 1771497291.458552
+    },
+    {
+      "index": 1,
+      "path": "frame-0001.png",
+      "timestamp": 1771497291.539057
+    },
+    {
+      "index": 2,
+      "path": "frame-0002.png",
+      "timestamp": 1771497291.570952
+    },
+    {
+      "index": 3,
+      "path": "frame-0003.png",
+      "timestamp": 1771497291.628273
+    },
+    {
+      "index": 4,
+      "path": "frame-0004.png",
+      "timestamp": 1771497291.670623
+    },
+    {
+      "index": 5,
+      "path": "frame-0005.png",
+      "timestamp": 1771497291.722959
+    },
+    {
+      "index": 6,
+      "path": "frame-0006.png",
+      "timestamp": 1771497291.774269
+    },
+    {
+      "index": 7,
+      "path": "frame-0007.png",
+      "timestamp": 1771497291.82085
+    },
+    {
+      "index": 8,
+      "path": "frame-0008.png",
+      "timestamp": 1771497291.872296
+    },
+    {
+      "index": 9,
+      "path": "frame-0009.png",
+      "timestamp": 1771497291.921906
+    },
+    {
+      "index": 10,
+      "path": "frame-0010.png",
+      "timestamp": 1771497291.970461
+    },
+    {
+      "index": 11,
+      "path": "frame-0011.png",
+      "timestamp": 1771497292.020636
+    },
+    {
+      "index": 12,
+      "path": "frame-0012.png",
+      "timestamp": 1771497292.070828
+    },
+    {
+      "index": 13,
+      "path": "frame-0013.png",
+      "timestamp": 1771497292.124617
+    },
+    {
+      "index": 14,
+      "path": "frame-0014.png",
+      "timestamp": 1771497292.172686
+    },
+    {
+      "index": 15,
+      "path": "frame-0015.png",
+      "timestamp": 1771497292.223172
+    },
+    {
+      "index": 16,
+      "path": "frame-0016.png",
+      "timestamp": 1771497292.270764
+    },
+    {
+      "index": 17,
+      "path": "frame-0017.png",
+      "timestamp": 1771497292.326435
+    },
+    {
+      "index": 18,
+      "path": "frame-0018.png",
+      "timestamp": 1771497292.373967
+    },
+    {
+      "index": 19,
+      "path": "frame-0019.png",
+      "timestamp": 1771497292.421369
+    },
+    {
+      "index": 20,
+      "path": "frame-0020.png",
+      "timestamp": 1771497292.470205
+    },
+    {
+      "index": 21,
+      "path": "frame-0021.png",
+      "timestamp": 1771497292.519888
+    },
+    {
+      "index": 22,
+      "path": "frame-0022.png",
+      "timestamp": 1771497292.57201
+    },
+    {
+      "index": 23,
+      "path": "frame-0023.png",
+      "timestamp": 1771497292.623892
+    },
+    {
+      "index": 24,
+      "path": "frame-0024.png",
+      "timestamp": 1771497292.677597
+    },
+    {
+      "index": 25,
+      "path": "frame-0025.png",
+      "timestamp": 1771497292.720966
+    },
+    {
+      "index": 26,
+      "path": "frame-0026.png",
+      "timestamp": 1771497292.769799
+    },
+    {
+      "index": 27,
+      "path": "frame-0027.png",
+      "timestamp": 1771497292.830198
+    },
+    {
+      "index": 28,
+      "path": "frame-0028.png",
+      "timestamp": 1771497292.889477
+    },
+    {
+      "index": 29,
+      "path": "frame-0029.png",
+      "timestamp": 1771497292.938801
+    },
+    {
+      "index": 30,
+      "path": "frame-0030.png",
+      "timestamp": 1771497292.987212
+    },
+    {
+      "index": 31,
+      "path": "frame-0031.png",
+      "timestamp": 1771497293.037856
+    },
+    {
+      "index": 32,
+      "path": "frame-0032.png",
+      "timestamp": 1771497293.093344
+    },
+    {
+      "index": 33,
+      "path": "frame-0032.png",
+      "timestamp": 1771497293.137216
+    },
+    {
+      "index": 34,
+      "path": "frame-0034.png",
+      "timestamp": 1771497293.186857
+    },
+    {
+      "index": 35,
+      "path": "frame-0035.png",
+      "timestamp": 1771497293.285991
+    },
+    {
+      "index": 36,
+      "path": "frame-0036.png",
+      "timestamp": 1771497293.33929
+    },
+    {
+      "index": 37,
+      "path": "frame-0036.png",
+      "timestamp": 1771497293.386747
+    },
+    {
+      "index": 38,
+      "path": "frame-0038.png",
+      "timestamp": 1771497293.437755
+    },
+    {
+      "index": 39,
+      "path": "frame-0039.png",
+      "timestamp": 1771497293.537096
+    },
+    {
+      "index": 40,
+      "path": "frame-0040.png",
+      "timestamp": 1771497293.587448
+    },
+    {
+      "index": 41,
+      "path": "frame-0041.png",
+      "timestamp": 1771497293.641661
+    },
+    {
+      "index": 42,
+      "path": "frame-0042.png",
+      "timestamp": 1771497293.685761
+    },
+    {
+      "index": 43,
+      "path": "frame-0043.png",
+      "timestamp": 1771497293.736813
+    },
+    {
+      "index": 44,
+      "path": "frame-0044.png",
+      "timestamp": 1771497293.787596
+    },
+    {
+      "index": 45,
+      "path": "frame-0045.png",
+      "timestamp": 1771497293.836892
+    },
+    {
+      "index": 46,
+      "path": "frame-0046.png",
+      "timestamp": 1771497293.892396
+    },
+    {
+      "index": 47,
+      "path": "frame-0047.png",
+      "timestamp": 1771497293.936133
+    },
+    {
+      "index": 48,
+      "path": "frame-0048.png",
+      "timestamp": 1771497293.986063
+    },
+    {
+      "index": 49,
+      "path": "frame-0049.png",
+      "timestamp": 1771497294.039604
+    },
+    {
+      "index": 50,
+      "path": "frame-0050.png",
+      "timestamp": 1771497294.086892
+    },
+    {
+      "index": 51,
+      "path": "frame-0051.png",
+      "timestamp": 1771497294.13652
+    },
+    {
+      "index": 52,
+      "path": "frame-0052.png",
+      "timestamp": 1771497294.186647
+    },
+    {
+      "index": 53,
+      "path": "frame-0052.png",
+      "timestamp": 1771497294.237522
+    },
+    {
+      "index": 54,
+      "path": "frame-0052.png",
+      "timestamp": 1771497294.29077
+    },
+    {
+      "index": 55,
+      "path": "frame-0055.png",
+      "timestamp": 1771497294.475133
+    },
+    {
+      "index": 56,
+      "path": "frame-0056.png",
+      "timestamp": 1771497294.524535
+    },
+    {
+      "index": 57,
+      "path": "frame-0057.png",
+      "timestamp": 1771497294.568406
+    },
+    {
+      "index": 58,
+      "path": "frame-0058.png",
+      "timestamp": 1771497294.619076
+    },
+    {
+      "index": 59,
+      "path": "frame-0059.png",
+      "timestamp": 1771497294.687561
+    },
+    {
+      "index": 60,
+      "path": "frame-0060.png",
+      "timestamp": 1771497294.768539
+    },
+    {
+      "index": 61,
+      "path": "frame-0061.png",
+      "timestamp": 1771497294.859909
+    },
+    {
+      "index": 62,
+      "path": "frame-0062.png",
+      "timestamp": 1771497294.93131
+    },
+    {
+      "index": 63,
+      "path": "frame-0063.png",
+      "timestamp": 1771497295.163463
+    },
+    {
+      "index": 64,
+      "path": "frame-0064.png",
+      "timestamp": 1771497295.20607
+    },
+    {
+      "index": 65,
+      "path": "frame-0064.png",
+      "timestamp": 1771497295.402083
+    },
+    {
+      "index": 66,
+      "path": "frame-0066.png",
+      "timestamp": 1771497295.33821
+    },
+    {
+      "index": 67,
+      "path": "frame-0067.png",
+      "timestamp": 1771497296.036466
+    },
+    {
+      "index": 68,
+      "path": "frame-0068.png",
+      "timestamp": 1771497296.397763
+    },
+    {
+      "index": 69,
+      "path": "frame-0069.png",
+      "timestamp": 1771497296.620254
+    },
+    {
+      "index": 70,
+      "path": "frame-0070.png",
+      "timestamp": 1771497296.849129
+    },
+    {
+      "index": 71,
+      "path": "frame-0071.png",
+      "timestamp": 1771497296.511296
+    },
+    {
+      "index": 72,
+      "path": "frame-0072.png",
+      "timestamp": 1771497297.025409
+    },
+    {
+      "index": 73,
+      "path": "frame-0073.png",
+      "timestamp": 1771497297.458195
+    },
+    {
+      "index": 74,
+      "path": "frame-0074.png",
+      "timestamp": 1771497297.791272
+    },
+    {
+      "index": 75,
+      "path": "frame-0075.png",
+      "timestamp": 1771497297.835542
+    },
+    {
+      "index": 76,
+      "path": "frame-0076.png",
+      "timestamp": 1771497297.810804
+    },
+    {
+      "index": 77,
+      "path": "frame-0077.png",
+      "timestamp": 1771497298.575443
+    },
+    {
+      "index": 78,
+      "path": "frame-0078.png",
+      "timestamp": 1771497298.590438
+    },
+    {
+      "index": 79,
+      "path": "frame-0079.png",
+      "timestamp": 1771497298.604462
+    },
+    {
+      "index": 80,
+      "path": "frame-0080.png",
+      "timestamp": 1771497298.923133
+    },
+    {
+      "index": 81,
+      "path": "frame-0081.png",
+      "timestamp": 1771497299.100727
+    },
+    {
+      "index": 82,
+      "path": "frame-0082.png",
+      "timestamp": 1771497299.215931
+    },
+    {
+      "index": 83,
+      "path": "frame-0083.png",
+      "timestamp": 1771497299.28068
+    },
+    {
+      "index": 84,
+      "path": "frame-0084.png",
+      "timestamp": 1771497299.389093
+    },
+    {
+      "index": 85,
+      "path": "frame-0085.png",
+      "timestamp": 1771497299.489081
+    },
+    {
+      "index": 86,
+      "path": "frame-0086.png",
+      "timestamp": 1771497299.601263
+    },
+    {
+      "index": 87,
+      "path": "frame-0087.png",
+      "timestamp": 1771497299.697331
+    },
+    {
+      "index": 88,
+      "path": "frame-0088.png",
+      "timestamp": 1771497299.838192
+    },
+    {
+      "index": 89,
+      "path": "frame-0089.png",
+      "timestamp": 1771497299.923514
+    },
+    {
+      "index": 90,
+      "path": "frame-0090.png",
+      "timestamp": 1771497300.022729
+    },
+    {
+      "index": 91,
+      "path": "frame-0091.png",
+      "timestamp": 1771497300.139297
+    },
+    {
+      "index": 92,
+      "path": "frame-0092.png",
+      "timestamp": 1771497300.569387
+    },
+    {
+      "index": 93,
+      "path": "frame-0093.png",
+      "timestamp": 1771497301.02529
+    },
+    {
+      "index": 94,
+      "path": "frame-0094.png",
+      "timestamp": 1771497301.005682
+    },
+    {
+      "index": 95,
+      "path": "frame-0095.png",
+      "timestamp": 1771497301.052046
+    },
+    {
+      "index": 96,
+      "path": "frame-0096.png",
+      "timestamp": 1771497301.320479
+    },
+    {
+      "index": 97,
+      "path": "frame-0097.png",
+      "timestamp": 1771497301.435518
+    },
+    {
+      "index": 98,
+      "path": "frame-0098.png",
+      "timestamp": 1771497301.961607
+    },
+    {
+      "index": 99,
+      "path": "frame-0099.png",
+      "timestamp": 1771497301.705821
+    },
+    {
+      "index": 100,
+      "path": "frame-0100.png",
+      "timestamp": 1771497301.835986
+    },
+    {
+      "index": 101,
+      "path": "frame-0101.png",
+      "timestamp": 1771497302.387906
+    },
+    {
+      "index": 102,
+      "path": "frame-0102.png",
+      "timestamp": 1771497302.424239
+    },
+    {
+      "index": 103,
+      "path": "frame-0102.png",
+      "timestamp": 1771497302.408045
+    },
+    {
+      "index": 104,
+      "path": "frame-0104.png",
+      "timestamp": 1771497303.394642
+    },
+    {
+      "index": 105,
+      "path": "frame-0105.png",
+      "timestamp": 1771497303.407396
+    },
+    {
+      "index": 106,
+      "path": "frame-0105.png",
+      "timestamp": 1771497303.37294
+    },
+    {
+      "index": 107,
+      "path": "frame-0107.png",
+      "timestamp": 1771497303.832457
+    },
+    {
+      "index": 108,
+      "path": "frame-0108.png",
+      "timestamp": 1771497303.939971
+    },
+    {
+      "index": 109,
+      "path": "frame-0109.png",
+      "timestamp": 1771497304.064022
+    },
+    {
+      "index": 110,
+      "path": "frame-0110.png",
+      "timestamp": 1771497304.435417
+    },
+    {
+      "index": 111,
+      "path": "frame-0110.png",
+      "timestamp": 1771497304.493124
+    },
+    {
+      "index": 112,
+      "path": "frame-0110.png",
+      "timestamp": 1771497304.510172
+    },
+    {
+      "index": 113,
+      "path": "frame-0113.png",
+      "timestamp": 1771497305.03924
+    },
+    {
+      "index": 114,
+      "path": "frame-0114.png",
+      "timestamp": 1771497305.144378
+    },
+    {
+      "index": 115,
+      "path": "frame-0115.png",
+      "timestamp": 1771497305.350664
+    },
+    {
+      "index": 116,
+      "path": "frame-0116.png",
+      "timestamp": 1771497305.430576
+    },
+    {
+      "index": 117,
+      "path": "frame-0117.png",
+      "timestamp": 1771497305.646486
+    },
+    {
+      "index": 118,
+      "path": "frame-0118.png",
+      "timestamp": 1771497306.011169
+    },
+    {
+      "index": 119,
+      "path": "frame-0118.png",
+      "timestamp": 1771497305.802176
+    },
+    {
+      "index": 120,
+      "path": "frame-0118.png",
+      "timestamp": 1771497305.939221
+    },
+    {
+      "index": 121,
+      "path": "frame-0121.png",
+      "timestamp": 1771497306.737341
+    },
+    {
+      "index": 122,
+      "path": "frame-0122.png",
+      "timestamp": 1771497306.671552
+    },
+    {
+      "index": 123,
+      "path": "frame-0123.png",
+      "timestamp": 1771497307.06042
+    },
+    {
+      "index": 124,
+      "path": "frame-0124.png",
+      "timestamp": 1771497306.927152
+    },
+    {
+      "index": 125,
+      "path": "frame-0125.png",
+      "timestamp": 1771497307.815738
+    },
+    {
+      "index": 126,
+      "path": "frame-0126.png",
+      "timestamp": 1771497307.190889
+    },
+    {
+      "index": 127,
+      "path": "frame-0126.png",
+      "timestamp": 1771497307.894575
+    },
+    {
+      "index": 128,
+      "path": "frame-0128.png",
+      "timestamp": 1771497308.278549
+    },
+    {
+      "index": 129,
+      "path": "frame-0129.png",
+      "timestamp": 1771497308.359584
+    },
+    {
+      "index": 130,
+      "path": "frame-0130.png",
+      "timestamp": 1771497308.418647
+    },
+    {
+      "index": 131,
+      "path": "frame-0130.png",
+      "timestamp": 1771497308.476317
+    },
+    {
+      "index": 132,
+      "path": "frame-0132.png",
+      "timestamp": 1771497308.582397
+    },
+    {
+      "index": 133,
+      "path": "frame-0133.png",
+      "timestamp": 1771497308.627024
+    },
+    {
+      "index": 134,
+      "path": "frame-0134.png",
+      "timestamp": 1771497308.675725
+    },
+    {
+      "index": 135,
+      "path": "frame-0135.png",
+      "timestamp": 1771497308.726677
+    },
+    {
+      "index": 136,
+      "path": "frame-0136.png",
+      "timestamp": 1771497308.793027
+    },
+    {
+      "index": 137,
+      "path": "frame-0136.png",
+      "timestamp": 1771497308.861337
+    },
+    {
+      "index": 138,
+      "path": "frame-0138.png",
+      "timestamp": 1771497308.94305
+    },
+    {
+      "index": 139,
+      "path": "frame-0139.png",
+      "timestamp": 1771497309.036706
+    },
+    {
+      "index": 140,
+      "path": "frame-0139.png",
+      "timestamp": 1771497309.07634
+    },
+    {
+      "index": 141,
+      "path": "frame-0141.png",
+      "timestamp": 1771497309.270087
+    },
+    {
+      "index": 142,
+      "path": "frame-0141.png",
+      "timestamp": 1771497309.174537
+    },
+    {
+      "index": 143,
+      "path": "frame-0143.png",
+      "timestamp": 1771497309.220679
+    },
+    {
+      "index": 144,
+      "path": "frame-0144.png",
+      "timestamp": 1771497309.678754
+    },
+    {
+      "index": 145,
+      "path": "frame-0145.png",
+      "timestamp": 1771497309.716721
+    },
+    {
+      "index": 146,
+      "path": "frame-0146.png",
+      "timestamp": 1771497309.76086
+    },
+    {
+      "index": 147,
+      "path": "frame-0147.png",
+      "timestamp": 1771497309.825715
+    },
+    {
+      "index": 148,
+      "path": "frame-0148.png",
+      "timestamp": 1771497309.934784
+    },
+    {
+      "index": 149,
+      "path": "frame-0149.png",
+      "timestamp": 1771497309.999915
+    },
+    {
+      "index": 150,
+      "path": "frame-0150.png",
+      "timestamp": 1771497310.107712
+    },
+    {
+      "index": 151,
+      "path": "frame-0151.png",
+      "timestamp": 1771497310.162123
+    },
+    {
+      "index": 152,
+      "path": "frame-0152.png",
+      "timestamp": 1771497310.2779
+    },
+    {
+      "index": 153,
+      "path": "frame-0152.png",
+      "timestamp": 1771497310.325508
+    },
+    {
+      "index": 154,
+      "path": "frame-0154.png",
+      "timestamp": 1771497310.209136
+    },
+    {
+      "index": 155,
+      "path": "frame-0155.png",
+      "timestamp": 1771497310.568108
+    },
+    {
+      "index": 156,
+      "path": "frame-0156.png",
+      "timestamp": 1771497310.625606
+    },
+    {
+      "index": 157,
+      "path": "frame-0156.png",
+      "timestamp": 1771497310.693511
+    },
+    {
+      "index": 158,
+      "path": "frame-0157.png",
+      "timestamp": 1771497310.742189
+    },
+    {
+      "index": 159,
+      "path": "frame-0159.png",
+      "timestamp": 1771497310.906099
+    },
+    {
+      "index": 160,
+      "path": "frame-0160.png",
+      "timestamp": 1771497310.985386
+    },
+    {
+      "index": 161,
+      "path": "frame-0161.png",
+      "timestamp": 1771497311.032942
+    },
+    {
+      "index": 162,
+      "path": "frame-0162.png",
+      "timestamp": 1771497311.077634
+    },
+    {
+      "index": 163,
+      "path": "frame-0163.png",
+      "timestamp": 1771497311.142186
+    },
+    {
+      "index": 164,
+      "path": "frame-0164.png",
+      "timestamp": 1771497311.177558
+    },
+    {
+      "index": 165,
+      "path": "frame-0165.png",
+      "timestamp": 1771497311.224466
+    },
+    {
+      "index": 166,
+      "path": "frame-0166.png",
+      "timestamp": 1771497311.274658
+    },
+    {
+      "index": 167,
+      "path": "frame-0167.png",
+      "timestamp": 1771497311.344372
+    },
+    {
+      "index": 168,
+      "path": "frame-0168.png",
+      "timestamp": 1771497311.379769
+    },
+    {
+      "index": 169,
+      "path": "frame-0169.png",
+      "timestamp": 1771497311.438637
+    },
+    {
+      "index": 170,
+      "path": "frame-0170.png",
+      "timestamp": 1771497311.491023
+    },
+    {
+      "index": 171,
+      "path": "frame-0171.png",
+      "timestamp": 1771497311.545561
+    },
+    {
+      "index": 172,
+      "path": "frame-0172.png",
+      "timestamp": 1771497311.661726
+    },
+    {
+      "index": 173,
+      "path": "frame-0173.png",
+      "timestamp": 1771497311.70814
+    },
+    {
+      "index": 174,
+      "path": "frame-0174.png",
+      "timestamp": 1771497311.76208
+    },
+    {
+      "index": 175,
+      "path": "frame-0175.png",
+      "timestamp": 1771497311.809753
+    },
+    {
+      "index": 176,
+      "path": "frame-0176.png",
+      "timestamp": 1771497311.860947
+    },
+    {
+      "index": 177,
+      "path": "frame-0177.png",
+      "timestamp": 1771497311.922279
+    },
+    {
+      "index": 178,
+      "path": "frame-0178.png",
+      "timestamp": 1771497311.998836
+    },
+    {
+      "index": 179,
+      "path": "frame-0179.png",
+      "timestamp": 1771497312.057382
+    },
+    {
+      "index": 180,
+      "path": "frame-0180.png",
+      "timestamp": 1771497312.107725
+    },
+    {
+      "index": 181,
+      "path": "frame-0181.png",
+      "timestamp": 1771497312.171566
+    },
+    {
+      "index": 182,
+      "path": "frame-0182.png",
+      "timestamp": 1771497312.232728
+    },
+    {
+      "index": 183,
+      "path": "frame-0183.png",
+      "timestamp": 1771497312.292571
+    },
+    {
+      "index": 184,
+      "path": "frame-0184.png",
+      "timestamp": 1771497312.355174
+    },
+    {
+      "index": 185,
+      "path": "frame-0185.png",
+      "timestamp": 1771497312.441314
+    },
+    {
+      "index": 186,
+      "path": "frame-0186.png",
+      "timestamp": 1771497312.489549
+    },
+    {
+      "index": 187,
+      "path": "frame-0187.png",
+      "timestamp": 1771497312.573968
+    },
+    {
+      "index": 188,
+      "path": "frame-0188.png",
+      "timestamp": 1771497312.60795
+    },
+    {
+      "index": 189,
+      "path": "frame-0189.png",
+      "timestamp": 1771497312.65786
+    },
+    {
+      "index": 190,
+      "path": "frame-0190.png",
+      "timestamp": 1771497312.713698
+    },
+    {
+      "index": 191,
+      "path": "frame-0191.png",
+      "timestamp": 1771497312.775673
+    },
+    {
+      "index": 192,
+      "path": "frame-0192.png",
+      "timestamp": 1771497312.822399
+    },
+    {
+      "index": 193,
+      "path": "frame-0193.png",
+      "timestamp": 1771497312.867177
+    },
+    {
+      "index": 194,
+      "path": "frame-0194.png",
+      "timestamp": 1771497312.929518
+    },
+    {
+      "index": 195,
+      "path": "frame-0195.png",
+      "timestamp": 1771497313.017904
+    },
+    {
+      "index": 196,
+      "path": "frame-0196.png",
+      "timestamp": 1771497313.238273
+    },
+    {
+      "index": 197,
+      "path": "frame-0197.png",
+      "timestamp": 1771497313.466646
+    },
+    {
+      "index": 198,
+      "path": "frame-0197.png",
+      "timestamp": 1771497313.429008
+    },
+    {
+      "index": 199,
+      "path": "frame-0199.png",
+      "timestamp": 1771497313.806569
+    },
+    {
+      "index": 200,
+      "path": "frame-0200.png",
+      "timestamp": 1771497314.090194
+    },
+    {
+      "index": 201,
+      "path": "frame-0200.png",
+      "timestamp": 1771497314.058474
+    },
+    {
+      "index": 202,
+      "path": "frame-0200.png",
+      "timestamp": 1771497314.078493
+    },
+    {
+      "index": 203,
+      "path": "frame-0201.png",
+      "timestamp": 1771497314.43367
+    },
+    {
+      "index": 204,
+      "path": "frame-0204.png",
+      "timestamp": 1771497314.910506
+    },
+    {
+      "index": 205,
+      "path": "frame-0205.png",
+      "timestamp": 1771497315.247215
+    },
+    {
+      "index": 206,
+      "path": "frame-0206.png",
+      "timestamp": 1771497314.841703
+    },
+    {
+      "index": 207,
+      "path": "frame-0207.png",
+      "timestamp": 1771497315.705144
+    },
+    {
+      "index": 208,
+      "path": "frame-0207.png",
+      "timestamp": 1771497315.599363
+    },
+    {
+      "index": 209,
+      "path": "frame-0209.png",
+      "timestamp": 1771497316.063742
+    },
+    {
+      "index": 210,
+      "path": "frame-0210.png",
+      "timestamp": 1771497316.190445
+    },
+    {
+      "index": 211,
+      "path": "frame-0211.png",
+      "timestamp": 1771497316.249321
+    },
+    {
+      "index": 212,
+      "path": "frame-0212.png",
+      "timestamp": 1771497316.403335
+    },
+    {
+      "index": 213,
+      "path": "frame-0213.png",
+      "timestamp": 1771497316.592126
+    },
+    {
+      "index": 214,
+      "path": "frame-0214.png",
+      "timestamp": 1771497317.024247
+    },
+    {
+      "index": 215,
+      "path": "frame-0214.png",
+      "timestamp": 1771497317.053722
+    },
+    {
+      "index": 216,
+      "path": "frame-0216.png",
+      "timestamp": 1771497317.072033
+    },
+    {
+      "index": 217,
+      "path": "frame-0217.png",
+      "timestamp": 1771497317.743958
+    },
+    {
+      "index": 218,
+      "path": "frame-0218.png",
+      "timestamp": 1771497317.765319
+    },
+    {
+      "index": 219,
+      "path": "frame-0219.png",
+      "timestamp": 1771497317.781187
+    },
+    {
+      "index": 220,
+      "path": "frame-0220.png",
+      "timestamp": 1771497318.294879
+    },
+    {
+      "index": 221,
+      "path": "frame-0221.png",
+      "timestamp": 1771497318.77043
+    },
+    {
+      "index": 222,
+      "path": "frame-0222.png",
+      "timestamp": 1771497318.740861
+    },
+    {
+      "index": 223,
+      "path": "frame-0222.png",
+      "timestamp": 1771497319.226657
+    },
+    {
+      "index": 224,
+      "path": "frame-0224.png",
+      "timestamp": 1771497319.761792
+    },
+    {
+      "index": 225,
+      "path": "frame-0225.png",
+      "timestamp": 1771497320.216969
+    },
+    {
+      "index": 226,
+      "path": "frame-0226.png",
+      "timestamp": 1771497320.40298
+    },
+    {
+      "index": 227,
+      "path": "frame-0227.png",
+      "timestamp": 1771497321.152548
+    },
+    {
+      "index": 228,
+      "path": "frame-0228.png",
+      "timestamp": 1771497321.182175
+    },
+    {
+      "index": 229,
+      "path": "frame-0229.png",
+      "timestamp": 1771497321.287807
+    },
+    {
+      "index": 230,
+      "path": "frame-0230.png",
+      "timestamp": 1771497321.939109
+    },
+    {
+      "index": 231,
+      "path": "frame-0231.png",
+      "timestamp": 1771497321.885746
+    },
+    {
+      "index": 232,
+      "path": "frame-0232.png",
+      "timestamp": 1771497321.920926
+    },
+    {
+      "index": 233,
+      "path": "frame-0233.png",
+      "timestamp": 1771497322.286273
+    },
+    {
+      "index": 234,
+      "path": "frame-0234.png",
+      "timestamp": 1771497322.396135
+    },
+    {
+      "index": 235,
+      "path": "frame-0235.png",
+      "timestamp": 1771497322.515597
+    },
+    {
+      "index": 236,
+      "path": "frame-0236.png",
+      "timestamp": 1771497323.58533
+    },
+    {
+      "index": 237,
+      "path": "frame-0237.png",
+      "timestamp": 1771497323.666951
+    },
+    {
+      "index": 238,
+      "path": "frame-0238.png",
+      "timestamp": 1771497323.632455
+    },
+    {
+      "index": 239,
+      "path": "frame-0239.png",
+      "timestamp": 1771497325.242062
+    },
+    {
+      "index": 240,
+      "path": "frame-0240.png",
+      "timestamp": 1771497325.205257
+    },
+    {
+      "index": 241,
+      "path": "frame-0241.png",
+      "timestamp": 1771497325.160982
+    },
+    {
+      "index": 242,
+      "path": "frame-0242.png",
+      "timestamp": 1771497326.870121
+    },
+    {
+      "index": 243,
+      "path": "frame-0243.png",
+      "timestamp": 1771497326.902733
+    },
+    {
+      "index": 244,
+      "path": "frame-0244.png",
+      "timestamp": 1771497326.893614
+    },
+    {
+      "index": 245,
+      "path": "frame-0245.png",
+      "timestamp": 1771497327.917989
+    },
+    {
+      "index": 246,
+      "path": "frame-0246.png",
+      "timestamp": 1771497328.090332
+    },
+    {
+      "index": 247,
+      "path": "frame-0247.png",
+      "timestamp": 1771497328.039483
+    },
+    {
+      "index": 248,
+      "path": "frame-0248.png",
+      "timestamp": 1771497328.174608
+    },
+    {
+      "index": 249,
+      "path": "frame-0249.png",
+      "timestamp": 1771497328.230113
+    },
+    {
+      "index": 250,
+      "path": "frame-0250.png",
+      "timestamp": 1771497328.280045
+    },
+    {
+      "index": 251,
+      "path": "frame-0251.png",
+      "timestamp": 1771497328.372895
+    },
+    {
+      "index": 252,
+      "path": "frame-0252.png",
+      "timestamp": 1771497328.453451
+    },
+    {
+      "index": 253,
+      "path": "frame-0253.png",
+      "timestamp": 1771497328.512903
+    },
+    {
+      "index": 254,
+      "path": "frame-0254.png",
+      "timestamp": 1771497328.590494
+    },
+    {
+      "index": 255,
+      "path": "frame-0255.png",
+      "timestamp": 1771497328.647082
+    },
+    {
+      "index": 256,
+      "path": "frame-0256.png",
+      "timestamp": 1771497328.697192
+    },
+    {
+      "index": 257,
+      "path": "frame-0257.png",
+      "timestamp": 1771497328.745816
+    },
+    {
+      "index": 258,
+      "path": "frame-0258.png",
+      "timestamp": 1771497328.800665
+    },
+    {
+      "index": 259,
+      "path": "frame-0259.png",
+      "timestamp": 1771497328.846531
+    },
+    {
+      "index": 260,
+      "path": "frame-0260.png",
+      "timestamp": 1771497328.896015
+    },
+    {
+      "index": 261,
+      "path": "frame-0261.png",
+      "timestamp": 1771497328.947591
+    },
+    {
+      "index": 262,
+      "path": "frame-0262.png",
+      "timestamp": 1771497329.001122
+    },
+    {
+      "index": 263,
+      "path": "frame-0263.png",
+      "timestamp": 1771497329.064153
+    },
+    {
+      "index": 264,
+      "path": "frame-0264.png",
+      "timestamp": 1771497329.28335
+    },
+    {
+      "index": 265,
+      "path": "frame-0264.png",
+      "timestamp": 1771497329.331424
+    },
+    {
+      "index": 266,
+      "path": "frame-0266.png",
+      "timestamp": 1771497329.411162
+    },
+    {
+      "index": 267,
+      "path": "frame-0267.png",
+      "timestamp": 1771497329.496802
+    },
+    {
+      "index": 268,
+      "path": "frame-0268.png",
+      "timestamp": 1771497329.711762
+    },
+    {
+      "index": 269,
+      "path": "frame-0269.png",
+      "timestamp": 1771497329.762289
+    },
+    {
+      "index": 270,
+      "path": "frame-0270.png",
+      "timestamp": 1771497329.819511
+    },
+    {
+      "index": 271,
+      "path": "frame-0271.png",
+      "timestamp": 1771497329.891247
+    },
+    {
+      "index": 272,
+      "path": "frame-0272.png",
+      "timestamp": 1771497329.949323
+    },
+    {
+      "index": 273,
+      "path": "frame-0273.png",
+      "timestamp": 1771497330.064186
+    },
+    {
+      "index": 274,
+      "path": "frame-0274.png",
+      "timestamp": 1771497330.30687
+    },
+    {
+      "index": 275,
+      "path": "frame-0275.png",
+      "timestamp": 1771497330.548336
+    },
+    {
+      "index": 276,
+      "path": "frame-0276.png",
+      "timestamp": 1771497330.587822
+    },
+    {
+      "index": 277,
+      "path": "frame-0277.png",
+      "timestamp": 1771497330.571075
+    },
+    {
+      "index": 278,
+      "path": "frame-0278.png",
+      "timestamp": 1771497330.860128
+    },
+    {
+      "index": 279,
+      "path": "frame-0279.png",
+      "timestamp": 1771497330.996197
+    },
+    {
+      "index": 280,
+      "path": "frame-0279.png",
+      "timestamp": 1771497331.071343
+    },
+    {
+      "index": 281,
+      "path": "frame-0281.png",
+      "timestamp": 1771497331.135187
+    },
+    {
+      "index": 282,
+      "path": "frame-0282.png",
+      "timestamp": 1771497331.341091
+    },
+    {
+      "index": 283,
+      "path": "frame-0283.png",
+      "timestamp": 1771497331.414262
+    },
+    {
+      "index": 284,
+      "path": "frame-0284.png",
+      "timestamp": 1771497331.714247
+    },
+    {
+      "index": 285,
+      "path": "frame-0285.png",
+      "timestamp": 1771497331.784559
+    },
+    {
+      "index": 286,
+      "path": "frame-0286.png",
+      "timestamp": 1771497332.004903
+    },
+    {
+      "index": 287,
+      "path": "frame-0287.png",
+      "timestamp": 1771497331.501929
+    },
+    {
+      "index": 288,
+      "path": "frame-0287.png",
+      "timestamp": 1771497332.087198
+    },
+    {
+      "index": 289,
+      "path": "frame-0288.png",
+      "timestamp": 1771497332.365527
+    },
+    {
+      "index": 290,
+      "path": "frame-0290.png",
+      "timestamp": 1771497332.893897
+    },
+    {
+      "index": 291,
+      "path": "frame-0291.png",
+      "timestamp": 1771497333.112425
+    },
+    {
+      "index": 292,
+      "path": "frame-0292.png",
+      "timestamp": 1771497333.246063
+    },
+    {
+      "index": 293,
+      "path": "frame-0293.png",
+      "timestamp": 1771497333.839333
+    },
+    {
+      "index": 294,
+      "path": "frame-0294.png",
+      "timestamp": 1771497334.184399
+    },
+    {
+      "index": 295,
+      "path": "frame-0295.png",
+      "timestamp": 1771497334.241421
+    }
+  ]
+}

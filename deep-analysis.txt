@@ -1,0 +1,35 @@
+=== LIVE TEST RESULTS: teamevople.kr ===
+
+COLORS: bg=9 text=0
+FONTS: ["Noto Sans KR","sans-serif","DM Serif Display","DM Serif Text","Urbanist","Abhaya Libre","Pretendard Regular","Pretendard","Arapey","Pretendard Medium","Instrument Serif","Pretendard SemiBold","Pretendard ExtraBold","Pretendard Bold"]
+SECTIONS: 6
+GRIDS: 0 FLEX: 100
+KEYFRAMES: 1 TRANSITIONS: 2
+BREAKPOINTS: [null,null,null,null]
+HOVERS: 14
+LIBS: [null,null]
+PERF: FCP=708 LCP=null CLS=0.0007
+A11Y: score=0 issues=29
+LH: {"performance":90,"seo":100,"accessibility":60,"bestPractices":100}
+CRAWL: 6 pages
+RUNTIME: IO=22 raf=778
+SVG: total=30 cssAnim=7
+CSS+: viewTrans=1 supports=60
+API: endpoints=1 cookies=2
+AUTH: forms=1
+SPA: routes=10 analyzed=10
+CANVAS: 0
+INTERACT: modals=0 tabs=0
+
+=== IDENTIFIED GAPS ===
+1. NO AI SCORING - raw data only, no quality assessment
+2. NO COLOR HARMONY - hex/rgb values but no psychology/mood analysis
+3. NO LAYOUT PATTERN CLASSIFICATION - grid/flex counts but no "hero section" or "card grid" naming
+4. NO FONT PAIRING ANALYSIS - font names but no pairing quality scoring
+5. NO UX PREDICTION - no usability/conversion scoring from design signals
+6. NO VISUAL HIERARCHY MAP - no weighting, no flow analysis
+7. NO TREND DETECTION - no era/style classification (brutalist, glassmorphism, etc)
+8. NO COMPONENT DETECTION - no naming of UI patterns (CTA, testimonial, pricing card)
+
+TOTAL KEYS: 23
+FILE SIZE: 426KB

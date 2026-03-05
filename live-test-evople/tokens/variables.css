@@ -1,0 +1,57 @@
+/* ═══════════════════════════════════════════════════ */
+/* AUTO-GENERATED CSS VARIABLES — design-dna v4.0     */
+/* ═══════════════════════════════════════════════════ */
+
+:root {
+  /* ── Original Variables ── */
+
+  /* ── Background Colors ── */
+  --dna-bg-0: #ffffff;
+  --dna-bg-1: #ffffff;
+  --dna-bg-2: #000000;
+  --dna-bg-3: #ff3838;
+  --dna-bg-4: #d9d9d9;
+  --dna-bg-5: #111111;
+  --dna-bg-6: #ededed;
+  --dna-bg-7: #1b1c1e;
+  --dna-bg-8: #1a1a1a;
+
+  /* ── Text Colors ── */
+  --dna-text-0: #000000;
+  --dna-text-1: #ffffff;
+  --dna-text-2: #1c1c1c;
+  --dna-text-3: #0000ee;
+  --dna-text-4: #666666;
+  --dna-text-5: #f9f9f9;
+  --dna-text-6: #f9f9f9;
+  --dna-text-7: #1d1d1f;
+
+  /* ── Fonts ── */
+  --dna-font-primary: "Noto Sans KR", sans-serif;
+  --dna-font-secondary: "sans-serif", sans-serif;
+  --dna-font-accent: "DM Serif Display", serif;
+
+  /* ── Font Sizes ── */
+  --dna-text-xs: 11px;
+  --dna-text-sm: 12px;
+  --dna-text-base: 13px;
+  --dna-text-md: 14px;
+  --dna-text-lg: 16px;
+  --dna-text-xl: 18px;
+  --dna-text-2xl: 22px;
+  --dna-text-3xl: 24px;
+  --dna-text-4xl: 80px;
+  --dna-text-5xl: 90px;
+
+  /* ── Spacing ── */
+  --dna-gap-0: 10px;
+  --dna-gap-1: 20px;
+  --dna-gap-2: 88px;
+  --dna-gap-3: 40px;
+  --dna-gap-4: 30px;
+  --dna-gap-5: 120px;
+  --dna-gap-6: 12px;
+  --dna-gap-7: 200px;
+  --dna-gap-8: 300px;
+  --dna-gap-9: 5px;
+}

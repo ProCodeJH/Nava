@@ -1,0 +1,105 @@
+{
+  "color": {
+    "background-0": {
+      "$value": "#ffffff",
+      "$type": "color"
+    },
+    "background-1": {
+      "$value": "#ffffff",
+      "$type": "color"
+    },
+    "background-2": {
+      "$value": "#000000",
+      "$type": "color"
+    },
+    "background-3": {
+      "$value": "#ff3838",
+      "$type": "color"
+    },
+    "background-4": {
+      "$value": "#d9d9d9",
+      "$type": "color"
+    },
+    "background-5": {
+      "$value": "#111111",
+      "$type": "color"
+    },
+    "background-6": {
+      "$value": "#ededed",
+      "$type": "color"
+    },
+    "background-7": {
+      "$value": "#1b1c1e",
+      "$type": "color"
+    },
+    "background-8": {
+      "$value": "#1a1a1a",
+      "$type": "color"
+    },
+    "text-0": {
+      "$value": "#000000",
+      "$type": "color"
+    },
+    "text-1": {
+      "$value": "#ffffff",
+      "$type": "color"
+    },
+    "text-2": {
+      "$value": "#1c1c1c",
+      "$type": "color"
+    },
+    "text-3": {
+      "$value": "#0000ee",
+      "$type": "color"
+    },
+    "text-4": {
+      "$value": "#666666",
+      "$type": "color"
+    },
+    "text-5": {
+      "$value": "#f9f9f9",
+      "$type": "color"
+    },
+    "text-6": {
+      "$value": "#f9f9f9",
+      "$type": "color"
+    },
+    "text-7": {
+      "$value": "#1d1d1f",
+      "$type": "color"
+    }
+  },
+  "typography": {
+    "font-0": {
+      "$value": {
+        "fontFamily": "Noto Sans KR"
+      },
+      "$type": "typography"
+    },
+    "font-1": {
+      "$value": {
+        "fontFamily": "sans-serif"
+      },
+      "$type": "typography"
+    },
+    "font-2": {
+      "$value": {
+        "fontFamily": "DM Serif Display"
+      },
+      "$type": "typography"
+    },
+    "font-3": {
+      "$value": {
+        "fontFamily": "DM Serif Text"
+      },
+      "$type": "typography"
+    },
+    "font-4": {
+      "$value": {
+        "fontFamily": "Urbanist"
+      },
+      "$type": "typography"
+    }
+  },
+  "spacing": {}
+}
