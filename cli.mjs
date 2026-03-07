@@ -113,7 +113,7 @@ import { extractAndSave as extractWebAnimationsAndSave } from './modules/web-ani
 import { runVisionLoop } from './modules/vision-loop.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const VERSION = '12.0.0';
+const VERSION = '13.0.0';
 
 // ═══════════════════════════════════════════
 // SHARED BROWSER SETUP
@@ -144,7 +144,7 @@ async function ensureDir(dir) {
 function banner() {
     console.log('');
     console.log(chalk.bold.cyan('='.repeat(60)));
-    console.log(chalk.bold.white('     DESIGN-DNA v10.0 — Ultimate Clone Engine'));
+    console.log(chalk.bold.white('     CloneEngine v13.0 — Unified Clone Pipeline'));
     console.log(chalk.bold.cyan('='.repeat(60)));
     console.log('');
 }
@@ -1305,8 +1305,8 @@ async function runServe(dir, options) {
 const program = new Command();
 
 program
-    .name('design-dna')
-    .description('Design-DNA v10.0 — Ultimate Clone Engine')
+    .name('clone-engine')
+    .description('CloneEngine v13.0 — Unified Clone Pipeline')
     .version(VERSION);
 
 program
@@ -1434,6 +1434,64 @@ program
             maxIterations: parseInt(opts.maxIterations),
             targetScore: parseInt(opts.target),
         });
+    });
+
+// ═══════════════════════════════════════════
+// CLONE COMMAND — Unified Pipeline (Engine + DNA)
+// URL → crawl → analyze → generate → build
+// ═══════════════════════════════════════════
+program
+    .command('clone <url>')
+    .description('Full clone pipeline: crawl → analyze → generate → build')
+    .option('-o, --output <dir>', 'Output directory')
+    .option('--mode <mode>', 'Output mode: react | html', 'react')
+    .option('--port <port>', 'Dev server port', '5173')
+    .option('--no-build', 'Skip build step')
+    .option('--no-start', 'Build but do not start dev server')
+    .action(async (url, opts) => {
+        banner();
+        const hostname = new URL(url).hostname.replace(/\./g, '-');
+        const outputDir = path.resolve(opts.output || `./clone-${hostname}`);
+        const projectDir = path.join(outputDir, 'project');
+
+        console.log(chalk.cyan(`  Target: ${url}`));
+        console.log(chalk.cyan(`  Output: ${outputDir}`));
+        console.log(chalk.cyan(`  Mode:   ${opts.mode}`));
+        console.log('');
+
+        try {
+            // Stage 1: CRAWL
+            const { crawl } = await import('./modules/crawl.mjs');
+            const snapshot = await crawl(url, { outputDir });
+
+            // Stage 2: ANALYZE
+            const { analyze } = await import('./modules/engine-analyze.mjs');
+            const snapshotPath = path.join(outputDir, 'site-snapshot.json');
+            const analysis = await analyze(snapshotPath, { outputDir });
+
+            // Stage 3: GENERATE
+            const { generateProject } = await import('./modules/generate.mjs');
+            const analysisPath = path.join(outputDir, 'analysis.json');
+            await generateProject(analysisPath, projectDir, { mode: opts.mode });
+
+            // Stage 4: BUILD (optional)
+            if (opts.build !== false) {
+                const { build: buildProject } = await import('./modules/build.mjs');
+                const port = parseInt(opts.port) || 5173;
+                await buildProject(projectDir, {
+                    port,
+                    autoStart: opts.start !== false,
+                });
+            }
+
+            console.log('');
+            console.log(chalk.green.bold('  Clone complete!'));
+            console.log(chalk.gray(`  Project: ${projectDir}`));
+            console.log('');
+        } catch (err) {
+            console.error(chalk.red(`  Clone failed: ${err.message}`));
+            process.exit(1);
+        }
     });
 
 program.parse();
