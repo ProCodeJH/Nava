@@ -1,0 +1,11 @@
+{
+  "queue": [
+    {
+      "id": "task-1773199405651",
+      "instruction": "테스트 작업",
+      "createdAt": "2026-03-11T03:23:25.651Z"
+    }
+  ],
+  "completed": [],
+  "failed": []
+}

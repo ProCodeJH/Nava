@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "once": true,
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node C:/Users/MIN/exodia/start-services.js",
+            "timeout": 15000
+          }
+        ]
+      }
+    ]
+  }
+}
