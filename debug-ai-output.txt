@@ -1,8 +1,0 @@
-﻿--- Testing aiDesignScore ---
-OK: B 72
-
---- Testing aiLayoutPatterns ---
-OK: long-scroll 2
-
---- Testing aiTypography ---
-OK: classic-pairing unknown

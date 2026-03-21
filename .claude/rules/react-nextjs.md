@@ -1,0 +1,15 @@
+---
+paths:
+  - "**/*.tsx"
+  - "**/*.jsx"
+  - "**/components/**"
+  - "**/app/**"
+---
+- Server Components by default, 'use client' only when needed
+- Functional components only, no class components
+- Custom hooks for shared logic (use* prefix)
+- Zod for runtime validation at boundaries
+- Tailwind CSS for styling, no inline styles
+- Proper error boundaries and Suspense
+- Accessibility: ARIA labels, keyboard nav, semantic HTML
+- Images: next/image with width/height/alt

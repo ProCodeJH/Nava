@@ -1,0 +1,15 @@
+---
+paths:
+  - "**/*.ts"
+  - "**/*.js"
+  - "**/*.mjs"
+  - "**/*.py"
+---
+- Never hardcode secrets, API keys, or passwords
+- Validate all user input at system boundaries
+- Use parameterized queries, never string concatenation for SQL
+- Sanitize HTML output to prevent XSS
+- Check auth/authz on every API endpoint
+- No sensitive data in logs or error messages
+- Use HTTPS for all external requests
+- Set proper CORS headers

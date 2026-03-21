@@ -1,0 +1,13 @@
+---
+paths:
+  - "**/naba-tools/**"
+  - "**/exodia-scripts/**"
+  - "**/clone-configs/**"
+---
+- These are Nava system internal tools - handle with care
+- Port assignments are fixed: 7778-7781 (Exodia), 18790-18840 (bots)
+- Tailscale IPs: classroom 100.75.212.102, clone 100.85.94.83
+- CDP port: 9222 (Antigravity), 9333 (Exodia)
+- OpenClaw runs from moltbot source, NOT npm
+- Config keys: streamMode (not streaming), no ownerDisplay
+- hide-daemon must run in GUI session via Startup vbs
