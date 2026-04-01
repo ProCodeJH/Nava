@@ -109,6 +109,48 @@ if (!existsSync(settingsPath)) {
       skip('Conveyor C already registered');
     }
 
+    // TeammateIdle: 팀원 유휴 시 자동 재투입
+    const idlePath = join(NAVA_ROOT, 'naba-tools', 'conveyor', 'teammate-idle.mjs').replace(/\\/g, '/');
+    if (!hooks.TeammateIdle?.some(h => h.hooks?.some(hh => hh.command?.includes('teammate-idle')))) {
+      hooks.TeammateIdle = hooks.TeammateIdle || [];
+      hooks.TeammateIdle.push({
+        matcher: '',
+        hooks: [{ type: 'command', command: `node ${idlePath}`, statusMessage: 'teammate re-engage' }],
+      });
+      changed = true;
+      ok('TeammateIdle hook registered');
+    } else {
+      skip('TeammateIdle already registered');
+    }
+
+    // TaskCompleted: 태스크 완료 로그
+    const completedPath = join(NAVA_ROOT, 'naba-tools', 'conveyor', 'task-completed.mjs').replace(/\\/g, '/');
+    if (!hooks.TaskCompleted?.some(h => h.hooks?.some(hh => hh.command?.includes('task-completed')))) {
+      hooks.TaskCompleted = hooks.TaskCompleted || [];
+      hooks.TaskCompleted.push({
+        matcher: '',
+        hooks: [{ type: 'command', command: `node ${completedPath}`, async: true, statusMessage: 'task log' }],
+      });
+      changed = true;
+      ok('TaskCompleted hook registered');
+    } else {
+      skip('TaskCompleted already registered');
+    }
+
+    // PostCompact: AutoDream (instinct 패턴 통합)
+    const dreamPath = join(NAVA_ROOT, 'naba-tools', 'conveyor', 'auto-dream.mjs').replace(/\\/g, '/');
+    if (!hooks.PostCompact?.some(h => h.hooks?.some(hh => hh.command?.includes('auto-dream')))) {
+      hooks.PostCompact = hooks.PostCompact || [];
+      hooks.PostCompact.push({
+        matcher: '',
+        hooks: [{ type: 'command', command: `node ${dreamPath}`, statusMessage: 'AutoDream' }],
+      });
+      changed = true;
+      ok('AutoDream (PostCompact) hook registered');
+    } else {
+      skip('AutoDream already registered');
+    }
+
     settings.hooks = hooks;
 
     // Plugins (all official)
