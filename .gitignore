@@ -5,3 +5,12 @@ node_modules/
 .DS_Store
 Thumbs.db
 .claude/worktrees/
+.superpowers/
+naba-tools/conveyor/.pipeline-state.json
+naba-tools/conveyor/.conveyor-backup/
+naba-tools/logs/reviews/*.json
+naba-tools/logs/pipelines/*.json
+naba-tools/logs/errors/*.json
+naba-tools/instinct/patterns.jsonl
+naba-tools/instinct/session-insights.jsonl
+naba-tools/instinct/compaction-log.jsonl
