@@ -1,7 +1,7 @@
-import { readFileSync, writeFileSync, unlinkSync, existsSync } from 'fs';
-import { join } from 'path';
-import { randomUUID } from 'crypto';
-import { fileURLToPath } from 'url';
+import { readFileSync, writeFileSync, unlinkSync, existsSync } from 'node:fs';
+import { join } from 'node:path';
+import { randomUUID } from 'node:crypto';
+import { savePipelineLog } from './pipeline-log.mjs';
 
 const STATE_FILE = join(import.meta.dirname, '.pipeline-state.json');
 
@@ -90,6 +90,7 @@ export function complete() {
   if (!state) throw new Error('No active pipeline state');
   state.status = 'completed';
   deleteFile();
+  try { savePipelineLog(state); } catch { /* 로그 실패는 비치명적 */ }
   return state;
 }
 

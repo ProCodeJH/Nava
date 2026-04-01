@@ -2,7 +2,7 @@ import { getState, createState, setApproved, cancel } from './pipeline-state.mjs
 
 const FEATURE_KEYWORDS = /만들어|추가해|구현해|개발해|기능\s|시스템|구축|페이지\s*만들|build|create|implement|add\s*feature|develop/i;
 const FULL_SIGNALS = /시스템|구축|처음부터|파이프라인|아키텍처|전체|완전한|풀스택|full.?stack|database|인증|auth/i;
-const APPROVE_KEYWORDS = /^(좋아|진행|진행해|해|응|ㅇㅇ|ㄱ|go|ok|yes|승인|괜찮|됐어|좋|ㄱㄱ)$/i;
+const APPROVE_KEYWORDS = /^(좋아|진행|진행해|해|응|ㅇㅇ|ㅇ|ㄱ|go|ok|yes|승인|괜찮|됐어|좋|ㄱㄱ)$/i;
 const CANCEL_KEYWORDS = /^(취소|중단|그만|cancel|stop|멈춰|아니|안해)$/i;
 const BUG_KEYWORDS = /고쳐|에러|안돼|안\s*되|왜\s*이래|터졌|버그|fix|error|bug|crash/i;
 
