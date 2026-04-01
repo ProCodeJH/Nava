@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "chroma": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": ["chroma-mcp", "--client-type", "persistent"]
+    },
+    "semgrep": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": ["semgrep-mcp"]
+    }
+  }
+}

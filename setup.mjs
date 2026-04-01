@@ -1,27 +1,30 @@
 #!/usr/bin/env node
 /**
- * Nava System Setup — 다른 컴퓨터에서 clone 후 이것만 실행하면 전체 시스템 세팅
+ * Nava System Setup — clone 후 이것만 실행하면 전체 시스템 자동 세팅
  *
- * Usage: node setup.mjs
+ * Usage: node setup.mjs [--full]
+ *   --full: ai-resources까지 clone (첫 설치 시)
  */
 
-import { existsSync, mkdirSync, writeFileSync, readFileSync, copyFileSync } from 'node:fs';
-import { join, resolve } from 'node:path';
+import { existsSync, mkdirSync, writeFileSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import { execFileSync } from 'node:child_process';
 
 const NAVA_ROOT = import.meta.dirname;
 const HOME = process.env.HOME || process.env.USERPROFILE;
 const CLAUDE_DIR = join(HOME, '.claude');
 const GIT_HOOKS_DIR = join(HOME, '.config', 'git', 'hooks');
+const FULL_MODE = process.argv.includes('--full');
 
-const log = (icon, msg) => console.log(`  ${icon} ${msg}`);
-const ok = (msg) => log('✓', msg);
-const skip = (msg) => log('·', msg);
-const warn = (msg) => log('!', msg);
+const ok = (msg) => console.log(`  \x1b[32m+\x1b[0m ${msg}`);
+const skip = (msg) => console.log(`  \x1b[90m-\x1b[0m ${msg}`);
+const warn = (msg) => console.log(`  \x1b[33m!\x1b[0m ${msg}`);
+const section = (msg) => console.log(`\n\x1b[36m== ${msg} ==\x1b[0m`);
 
-console.log('\n🦋 Nava System Setup\n');
+console.log('\n\x1b[35mNava System Setup\x1b[0m\n');
 
-// ── 1. 디렉토리 생성 ──
+// == 1. Directories ==
+section('1. Directories');
 const dirs = [
   join(NAVA_ROOT, 'naba-tools', 'logs', 'reviews'),
   join(NAVA_ROOT, 'naba-tools', 'logs', 'pipelines'),
@@ -29,112 +32,181 @@ const dirs = [
   join(NAVA_ROOT, 'naba-tools', 'instinct'),
   GIT_HOOKS_DIR,
 ];
-
 for (const dir of dirs) {
   if (!existsSync(dir)) {
     mkdirSync(dir, { recursive: true });
-    ok(`Created: ${dir}`);
+    ok(`Created ${dir.replace(HOME, '~')}`);
   }
 }
 ok('Directories ready');
 
-// ── 2. 글로벌 Git Hooks (컨베이어 A) ──
+// == 2. Global Git Hooks (Conveyor A) ==
+section('2. Global Git Hooks (Conveyor A)');
 const dispatchPath = join(NAVA_ROOT, 'naba-tools', 'conveyor', 'reviewer-dispatch.mjs').replace(/\\/g, '/');
 const patchPath = join(NAVA_ROOT, 'naba-tools', 'conveyor', 'post-commit-patch.mjs').replace(/\\/g, '/');
 
-const preCommit = `#!/bin/bash
-# Nava Code Quality Conveyor — Global pre-commit hook
-if [ "\${CONVEYOR_RUNNING}" = "1" ]; then exit 0; fi
-export CONVEYOR_RUNNING=1
-node "${dispatchPath}"
-EXIT_CODE=$?
-unset CONVEYOR_RUNNING
-exit $EXIT_CODE
-`;
+writeFileSync(join(GIT_HOOKS_DIR, 'pre-commit'), [
+  '#!/bin/bash',
+  '# Nava Code Quality Conveyor',
+  'if [ "${CONVEYOR_RUNNING}" = "1" ]; then exit 0; fi',
+  'export CONVEYOR_RUNNING=1',
+  `node "${dispatchPath}"`,
+  'EXIT_CODE=$?',
+  'unset CONVEYOR_RUNNING',
+  'exit $EXIT_CODE',
+].join('\n') + '\n');
 
-const postCommit = `#!/bin/bash
-# Nava Code Quality Conveyor — Global post-commit hook
-node "${patchPath}"
-`;
-
-writeFileSync(join(GIT_HOOKS_DIR, 'pre-commit'), preCommit);
-writeFileSync(join(GIT_HOOKS_DIR, 'post-commit'), postCommit);
+writeFileSync(join(GIT_HOOKS_DIR, 'post-commit'), [
+  '#!/bin/bash',
+  '# Nava Conveyor — commit hash patch',
+  `node "${patchPath}"`,
+].join('\n') + '\n');
 
 try {
   execFileSync('git', ['config', '--global', 'core.hooksPath', GIT_HOOKS_DIR.replace(/\\/g, '/')]);
-  ok('Global git hooks installed (Conveyor A)');
+  ok('Global git hooks installed');
 } catch {
-  warn('Failed to set global git hooks path');
+  warn('Failed to set global git hooks');
 }
 
-// ── 3. Claude Code Hooks (컨베이어 B, C) ──
+// == 3. Claude Code Settings (Conveyor B, C + Plugins) ==
+section('3. Claude Code Settings');
 const settingsPath = join(CLAUDE_DIR, 'settings.json');
 
-if (existsSync(settingsPath)) {
+if (!existsSync(settingsPath)) {
+  warn('~/.claude/settings.json not found — install Claude Code first');
+} else {
   try {
     const settings = JSON.parse(readFileSync(settingsPath, 'utf8'));
-    const hooks = settings.hooks || {};
     let changed = false;
+    const hooks = settings.hooks || {};
 
-    // 컨베이어 B: UserPromptSubmit
+    // Conveyor B: UserPromptSubmit
     const intentPath = join(NAVA_ROOT, 'naba-tools', 'conveyor', 'pipeline-intent.mjs').replace(/\\/g, '/');
-    const hasB = hooks.UserPromptSubmit?.some(h =>
-      h.hooks?.some(hh => hh.command?.includes('pipeline-intent'))
-    );
-    if (!hasB) {
+    if (!hooks.UserPromptSubmit?.some(h => h.hooks?.some(hh => hh.command?.includes('pipeline-intent')))) {
       hooks.UserPromptSubmit = hooks.UserPromptSubmit || [];
       hooks.UserPromptSubmit.push({
         matcher: '',
-        hooks: [{ type: 'command', command: `node ${intentPath}`, statusMessage: '파이프라인 감지' }],
+        hooks: [{ type: 'command', command: `node ${intentPath}`, statusMessage: 'pipeline detect' }],
       });
       changed = true;
-      ok('Registered Conveyor B (Feature Dev) hook');
+      ok('Conveyor B (Feature Dev) registered');
     } else {
-      skip('Conveyor B hook already registered');
+      skip('Conveyor B already registered');
     }
 
-    // 컨베이어 C: PostToolUse:Bash
+    // Conveyor C: PostToolUse:Bash
     const watchdogPath = join(NAVA_ROOT, 'naba-tools', 'conveyor', 'watchdog.mjs').replace(/\\/g, '/');
-    const hasC = hooks.PostToolUse?.some(h =>
-      h.matcher === 'Bash' && h.hooks?.some(hh => hh.command?.includes('watchdog'))
-    );
-    if (!hasC) {
+    if (!hooks.PostToolUse?.some(h => h.matcher === 'Bash' && h.hooks?.some(hh => hh.command?.includes('watchdog')))) {
       hooks.PostToolUse = hooks.PostToolUse || [];
       hooks.PostToolUse.push({
         matcher: 'Bash',
-        hooks: [{ type: 'command', command: `node ${watchdogPath}`, statusMessage: '에러 감시' }],
+        hooks: [{ type: 'command', command: `node ${watchdogPath}`, statusMessage: 'error watch' }],
       });
       changed = true;
-      ok('Registered Conveyor C (Watchdog) hook');
+      ok('Conveyor C (Watchdog) registered');
     } else {
-      skip('Conveyor C hook already registered');
+      skip('Conveyor C already registered');
+    }
+
+    settings.hooks = hooks;
+
+    // Plugins (all official)
+    const PLUGINS = [
+      'claude-code-setup', 'claude-md-management', 'feature-dev', 'security-guidance',
+      'skill-creator', 'code-simplifier', 'frontend-design', 'commit-commands',
+      'playwright', 'github', 'hookify', 'plugin-dev', 'agent-sdk-dev',
+      'ralph-loop', 'pr-review-toolkit', 'playground', 'explanatory-output-style',
+      'learning-output-style', 'context7', 'supabase', 'firebase', 'slack',
+      'typescript-lsp', 'csharp-lsp', 'asana', 'gitlab', 'greptile',
+      'linear', 'serena', 'stripe', 'clangd-lsp', 'gopls-lsp', 'jdtls-lsp',
+      'kotlin-lsp', 'lua-lsp', 'php-lsp', 'pyright-lsp', 'rust-analyzer-lsp',
+      'swift-lsp', 'superpowers',
+    ];
+
+    settings.enabledPlugins = settings.enabledPlugins || {};
+    let pluginCount = 0;
+    for (const p of PLUGINS) {
+      const key = `${p}@claude-plugins-official`;
+      if (!settings.enabledPlugins[key]) {
+        settings.enabledPlugins[key] = true;
+        pluginCount++;
+      }
+    }
+    if (pluginCount > 0) {
+      changed = true;
+      ok(`${pluginCount} plugins enabled`);
+    } else {
+      skip('All plugins already enabled');
     }
 
     if (changed) {
-      settings.hooks = hooks;
       writeFileSync(settingsPath, JSON.stringify(settings, null, 2));
-      ok('Updated settings.json');
+      ok('settings.json updated');
     }
   } catch (e) {
-    warn(`Failed to update settings.json: ${e.message}`);
+    warn(`settings.json failed: ${e.message}`);
   }
-} else {
-  warn('~/.claude/settings.json not found — install Claude Code first');
 }
 
-// ── 4. 필요한 플러그인 목록 출력 ──
-console.log('\n📦 Required Plugins (install manually in Claude Code):');
-const plugins = [
-  'commit-commands', 'pr-review-toolkit', 'feature-dev', 'frontend-design',
-  'plugin-dev', 'agent-sdk-dev', 'skill-creator', 'hookify',
-  'claude-code-setup', 'claude-md-management', 'superpowers',
-];
-plugins.forEach(p => console.log(`  · ${p}`));
+// == 4. MCP Servers ==
+section('4. MCP Servers');
+const mcpSource = join(NAVA_ROOT, 'config', 'mcp.json');
+const mcpTarget = join(NAVA_ROOT, '..', '.mcp.json');
 
-// ── 5. 환경변수 안내 ──
-console.log('\n🔑 Optional Environment Variables:');
-console.log('  · TELEGRAM_BOT_TOKEN — for Telegram notifications');
-console.log('  · TELEGRAM_CHAT_ID   — for Telegram notifications');
+if (existsSync(mcpSource) && !existsSync(mcpTarget)) {
+  try {
+    writeFileSync(mcpTarget, readFileSync(mcpSource, 'utf8'));
+    ok('MCP config installed');
+  } catch {
+    warn('MCP config copy failed');
+  }
+} else if (existsSync(mcpTarget)) {
+  skip('MCP config exists');
+} else {
+  skip('No MCP template — create config/mcp.json to auto-install');
+}
 
-// ── Done ──
-console.log('\n🦋 Setup complete. Restart Claude Code to activate.\n');
+// == 5. AI Resources ==
+section('5. AI Resources');
+const aiDir = join(NAVA_ROOT, '..', 'ai-resources');
+
+if (FULL_MODE && !existsSync(aiDir)) {
+  console.log('  Cloning ai-resources...');
+  try {
+    execFileSync('git', ['clone', 'https://github.com/ProCodeJH/ai-resources.git'], {
+      cwd: join(NAVA_ROOT, '..'),
+      stdio: 'inherit',
+    });
+    ok('ai-resources cloned');
+  } catch {
+    warn('Clone failed — do it manually');
+  }
+} else if (existsSync(aiDir)) {
+  ok('ai-resources found');
+} else {
+  warn('ai-resources missing — run: node setup.mjs --full');
+}
+
+// == 6. Environment ==
+section('6. Environment (optional)');
+console.log('  TELEGRAM_BOT_TOKEN — notifications');
+console.log('  TELEGRAM_CHAT_ID   — notification target');
+
+// == Done ==
+let pluginTotal = 0;
+try {
+  const s = JSON.parse(readFileSync(settingsPath, 'utf8'));
+  pluginTotal = Object.keys(s.enabledPlugins || {}).length;
+} catch { /* ignore */ }
+
+console.log(`
+\x1b[35mSetup Complete\x1b[0m
+
+  Conveyor A  \x1b[32mevery git commit\x1b[0m
+  Conveyor B  \x1b[32mevery "build" command\x1b[0m
+  Conveyor C  \x1b[32mevery bash error\x1b[0m
+  Plugins     \x1b[32m${pluginTotal} enabled\x1b[0m
+
+  \x1b[33mRestart Claude Code to activate.\x1b[0m
+`);
