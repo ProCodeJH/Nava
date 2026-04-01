@@ -180,6 +180,12 @@ export async function dispatch() {
     const raw = parseIssues(result.stdout);
     const issues = raw.map(reclassify);
     allIssues.push(...issues);
+
+    // 전체 타임아웃 체크
+    if (Date.now() - startTime > TIMEOUT_TOTAL) {
+      console.log('[CONVEYOR] Total timeout reached — skipping remaining reviewers');
+      break;
+    }
   }
 
   // ── Process issues & auto-fix ──
