@@ -2,56 +2,107 @@
 
 **CTO AI for Jahyeon** — Claude Code 기반 AI 개발 파트너 시스템
 
+## Quick Start
+
+```bash
+# 1. Clone
+git clone https://github.com/ProCodeJH/Nava.git
+cd Nava
+
+# 2. Setup (모든 설정 자동)
+node setup.mjs
+
+# 3. 풀 설치 (ai-resources 포함)
+node setup.mjs --full
+
+# 4. Claude Code 재시작
+# 끝. 이제 평소처럼 쓰면 된다.
+```
+
 ## What is Nava?
 
-나바는 Claude Code 위에 구축된 AI CTO 시스템이다. 13개 전문 에이전트, 16개 자동 스킬, 19개 커맨드, 6개 룰, 5개 아웃풋 스타일, 42개 플러그인, 7개 MCP 서버를 통합 운용한다.
+나바는 Claude Code 위에 구축된 AI CTO 시스템이다. 13개 전문 에이전트, 16개 자동 스킬, 19개 커맨드, 39개 플러그인, 7개 MCP 서버를 통합 운용한다.
 
 자현(Jahyeon)이 말만 하면, 나바가 intent를 분석해서 최적의 도구를 자동 선택하고 실행한다.
+
+## Setup이 하는 것
+
+`node setup.mjs` 한 줄이면 자동으로:
+
+| 항목 | 설명 |
+|---|---|
+| 글로벌 Git Hooks | 모든 git repo에서 커밋 시 자동 코드 리뷰 |
+| 컨베이어 B Hook | "만들어" 류 명령 시 자동 파이프라인 실행 |
+| 컨베이어 C Hook | Bash 에러 시 자동 디버깅 유도 |
+| 플러그인 39개 | settings.json에 자동 활성화 |
+| MCP 서버 설정 | config/mcp.json 템플릿 복사 |
+| 디렉토리 구조 | logs, instinct 등 런타임 디렉토리 생성 |
+
+`--full` 플래그 추가 시: ai-resources (785 스킬 + 16 에이전트 + 28 템플릿) 자동 clone
+
+## Conveyor System (자동화 회로)
+
+3개 컨베이어가 항상 자동으로 작동한다. 설정 불필요.
+
+### Conveyor A: Code Quality
+- **트리거**: `git commit` (모든 프로젝트)
+- **동작**: staged 파일을 확장자별 리뷰어(ts-reviewer/py-reviewer/code-reviewer)가 자동 리뷰
+- **심각한 이슈**: 자동 수정 후 커밋 진행
+- **경미한 이슈**: 터미널에 보고만
+- **로그**: `naba-tools/logs/reviews/`
+
+### Conveyor B: Feature Dev
+- **트리거**: "만들어", "구현해", "시스템 구축" 등 기능 개발 명령
+- **동작**: 키워드로 경량(3단계)/풀(9단계) 자동 판별
+  - 경량: 설계 → 구현 → 리뷰+테스트
+  - 풀: bkit 9단계 파이프라인
+- **체크포인트**: 설계 단계만 사용자 승인 필요
+- **로그**: `naba-tools/logs/pipelines/`
+
+### Conveyor C: Watchdog
+- **트리거**: Bash 명령 에러 (exit code !== 0)
+- **동작**: 에러 패턴 분석 → 심각하면 자동 디버깅 유도
+- **테스트 실패**: 최대 3회 자동 재시도 유도
+- **로그**: `naba-tools/logs/errors/`
 
 ## Structure
 
 ```
 Nava/
-├── CLAUDE.md                    # 메인 인스트럭션 (나바 정체성 + 모든 설정)
+├── setup.mjs                    # 원클릭 세팅 스크립트
+├── CLAUDE.md                    # 나바 정체성 + 모든 설정
+├── config/
+│   └── mcp.json                 # MCP 서버 설정 템플릿
 ├── .claude/
 │   ├── agents/                  # 13개 전문 에이전트
-│   │   ├── ai-engineer.md       #   AI 시스템 설계/배포/최적화
-│   │   ├── code-explorer.md     #   코드베이스 분석/추적
-│   │   ├── data-engineer.md     #   DB 설계, 마이그레이션
-│   │   ├── debugger.md          #   멀티시스템 버그 추적
-│   │   ├── deployer.md          #   Vercel 배포 전용
-│   │   ├── devops-engineer.md   #   CI/CD, 인프라, 배포
-│   │   ├── doc-writer.md        #   기술 문서, API 문서
-│   │   ├── fullstack-dev.md     #   React/Next.js/Node.js 풀스택
-│   │   ├── mcp-expert.md        #   MCP 서버 설계/구현
-│   │   ├── multi-agent-coordinator.md  # 에이전트 간 협업 조율
-│   │   ├── performance-optimizer.md    # 성능 최적화/번들 분석
-│   │   ├── security-auditor.md  #   보안 감사, OWASP
-│   │   └── web-clone-specialist.md     # CloneEngine 사이트 복제
 │   ├── skills/                  # 16개 자동 발동 스킬
-│   │   ├── ai-arsenal/          #   785 스킬 검색/브라우즈
-│   │   ├── bkit-pipeline/       #   9단계 PDCA 개발 파이프라인
-│   │   ├── clone-engine/        #   AI-Native 웹 클로닝
-│   │   ├── codebase-viz/        #   프로젝트 구조 시각화
-│   │   ├── data-ops/            #   DB/데이터 파이프라인
-│   │   ├── deep-research/       #   코드베이스 심층 분석
-│   │   ├── exodia-control/      #   학원 원격 제어
-│   │   ├── explain/             #   코드/개념 설명
-│   │   ├── monitor/             #   프로세스/로그 모니터링
-│   │   ├── nava-system/         #   시스템 상태 관리
-│   │   ├── obsidian-sync/       #   Obsidian 노트 연동
-│   │   ├── pr-summary/          #   PR 요약/리뷰
-│   │   ├── project-init/        #   프로젝트 초기화
-│   │   ├── quick-fix/           #   빠른 버그 수정
-│   │   ├── refactor/            #   코드 리팩토링
-│   │   └── teach-prep/          #   교재 제작 (코딩쏙)
 │   ├── commands/                # 19개 슬래시 커맨드
-│   ├── rules/                   # 6개 코딩/시스템 룰
-│   ├── output-styles/           # 5개 아웃풋 스타일
-│   └── settings.local.json     # 프로젝트 레벨 설정 (permissions, hooks)
-├── config/
-│   └── global-settings.json     # 글로벌 설정 (hooks, 42개 plugins)
-└── exodia-setup/                # Exodia 학원 서비스 부팅 스크립트
+│   ├── rules/                   # 코딩/시스템 룰
+│   └── settings.local.json      # 프로젝트 레벨 설정
+├── naba-tools/
+│   ├── conveyor/                # 컨베이어 시스템
+│   │   ├── reviewer-dispatch.mjs    # A: 코드 리뷰 디스패처
+│   │   ├── review-log.mjs           # A: 리뷰 로그 작성기
+│   │   ├── post-commit-patch.mjs    # A: commit hash 패치
+│   │   ├── install-hook.mjs         # A: hook 설치 (setup.mjs가 대체)
+│   │   ├── pipeline-intent.mjs      # B: 기능 개발 intent 감지
+│   │   ├── pipeline-state.mjs       # B: 파이프라인 상태 관리
+│   │   ├── pipeline-log.mjs         # B: 파이프라인 로그
+│   │   ├── watchdog.mjs             # C: 에러 감지
+│   │   └── watchdog-log.mjs         # C: 에러 로그
+│   ├── hooks/                   # 커스텀 hooks
+│   │   ├── telegram-notify.mjs      # 텔레그램 알림
+│   │   └── post-compact-save.mjs    # 컨텍스트 압축 기록
+│   ├── instinct/                # 학습 시스템
+│   │   ├── instinct.json            # 활성 패턴
+│   │   └── instinct-engine.mjs      # 패턴 인식 엔진
+│   └── logs/                    # 런타임 로그 (gitignored)
+│       ├── reviews/
+│       ├── pipelines/
+│       └── errors/
+└── docs/
+    ├── specs/                   # 설계 문서
+    └── plans/                   # 구현 계획
 ```
 
 ## Agents (13)
@@ -95,7 +146,7 @@ Nava/
 | "모니터링" / "로그 봐" / "프로세스" | monitor |
 | "DB" / "스키마" / "쿼리" | data-ops |
 
-## Plugins (42)
+## Plugins (39)
 
 ### Development
 commit-commands, pr-review-toolkit, feature-dev, frontend-design, playground, plugin-dev, agent-sdk-dev, skill-creator, code-simplifier, hookify, ralph-loop
@@ -107,9 +158,9 @@ supabase, firebase, stripe, slack, linear, asana, gitlab, github, greptile, sere
 typescript, csharp, clangd, gopls, jdtls, kotlin, lua, php, pyright, rust-analyzer, swift
 
 ### Utility
-claude-code-setup, claude-md-management, security-guidance, explanatory-output-style, learning-output-style, playwright
+claude-code-setup, claude-md-management, security-guidance, explanatory-output-style, learning-output-style, playwright, superpowers
 
-## MCP Servers (7)
+## MCP Servers
 
 | Server | Use |
 |---|---|
@@ -121,32 +172,28 @@ claude-code-setup, claude-md-management, security-guidance, explanatory-output-s
 | Cloudflare | Workers, D1, KV, R2 |
 | Vercel | Deployments, domains |
 
-## Hooks
+## Environment Variables (Optional)
 
-### Global (settings.json)
-- **PreToolUse:Bash** — Destructive command blocker (`rm -rf /`, `format`, `del /s`)
-- **PostToolUse:Write|Edit** — Hardcoded secret detector
+```bash
+TELEGRAM_BOT_TOKEN=xxx    # Telegram 알림
+TELEGRAM_CHAT_ID=xxx      # Telegram 채팅 대상
+```
 
-### Project-level (settings.local.json)
-- **SessionStart** — Exodia 서비스 자동 부팅
-- **PreToolUse:Bash** — Destructive command warning (prompt-based)
-- **PreToolUse:Write|Edit** — Secret/path validation (prompt-based)
-- **PostToolUse:Write** — TODO/console.log/import check (prompt-based)
-- **Stop** — Task completion verification (prompt-based)
+## Requirements
 
-## Tech Stack
-
-- **Runtime**: Node.js v24, Python 3.12
-- **AI**: Claude Opus 4.6 (primary), Gemini Flash (fallback)
-- **Desktop**: pyautogui, Win32 API, CDP, Puppeteer, Playwright
-- **Vision**: OmniParser (YOLO+Florence2), EasyOCR
-- **Network**: Tailscale VPN, SSH
-- **Infra**: Telegram Bot API, Supabase, Vercel, Cloudflare Workers
+- Node.js v24+
+- Claude Code CLI
+- Git
+- Python 3.12+ (일부 MCP 서버용, optional)
 
 ## Philosophy
 
 1. **Spec-first** — 코드 전에 반드시 계획
 2. **PDCA** — Quick Fix = Do→Check | Feature = Plan→Design→Do→Check→Act
-3. **Same mistake twice = incompetence** — 실수는 MEMORY.md에 기록
+3. **Same mistake twice = incompetence** — 실수는 기록
 4. **자현's time is sacred** — 1시간 투자해서 5분 절약
 5. **Proactive** — 할 일 없으면 찾아서 한다
+
+## License
+
+Private — ProCodeJH
